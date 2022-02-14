@@ -1,4 +1,4 @@
-export class Animal {
+export class Dog {
   public name: string;
 
   constructor(name: string) {
@@ -6,17 +6,17 @@ export class Animal {
   }
 
   public makeSound(): void {
-    process.stdout.write('generic animal sound\n');
-  }
-}
-
-export class Dog extends Animal {
-  public makeSound(): void {
     process.stdout.write('wuff wuff\n');
   }
 }
 
-export class Cat extends Animal {
+export class Cat {
+  public name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
   public makeSound(): void {
     process.stdout.write('meow meow\n');
   }
